@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Roll Dice</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="RollDice.css" />
+  </head>
+  <body>
+    <header><h1 id="header">Header</h1></header>
+
+    <section>
+      <nav>
+        <p>Please select your Dice Dimension:</p>
+        <input type="text" id="DiceDimension" name="DiceDimension">
+        <input type="submit" value="Submit" onclick="RollTheDice()">
+        <!-- <input type="submit" value="Submit" onclick=setTimeout(RollTheDice(), 3000)> -->
+        
+        <img src="R.gif" alt="funny GIF" width="30%">
+            
+              <script>
+              function RollTheDice(){
+              let y = document.getElementById("DiceDimension").value;
+              let x = Math.floor((Math.random() * y) + 1);
+              document.getElementById("DiceRollResult").innerHTML = x;
+              }
+
+              </script>     
+      </nav>
+
+      <nav>
+        <p>Dice Roll Result:</p>
+        
+        <p id="DiceRollResult" class="ex1" ></p>
+
+      
+      </nav>
+
+    </section>
+
+    <script>
+      document.getElementById("header").innerText = "Roll a Dice, Try your Luck";
+ 
+    </script>
+  </body>
+</html>
